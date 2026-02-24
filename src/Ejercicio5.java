@@ -5,23 +5,28 @@ public class Ejercicio5 {
         Scanner sc = new Scanner(System.in);
         String bien = "contra";
         String contra;
-        int intentos = 0;
+        boolean correcto = false;
+        int maxintentos = 3;
+        int contador = 0;
 
-        while(intentos!=3){
+        while((contador<maxintentos) && (!correcto)) {
 
+            System.out.println("intentos restantes: " + (maxintentos-contador));
             System.out.println("ingrese la contraseña:");
             contra = sc.nextLine();
             if (contra.equals(bien)) {
                 System.out.println("contraseña correcta");
-                break;
+                correcto = true;
             }else {
                 System.out.println("contraseña incorrecta");
-                intentos ++;
+                contador ++;
             }
         }
-        if (intentos==3){
-            System.out.println("acceso denegado");
-            System.exit(0);
+        if (contador == maxintentos) {
+            System.out.println("acceso denegado intentos agotados");
+        }else {
+            System.out.println("acceso permitido");
         }
+        sc.close();
     }
 }
