@@ -5,7 +5,5 @@ public class Ejercicio4 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el numero");
         int numero = sc.nextInt();
-
-
     }
 }
