@@ -5,6 +5,8 @@ public class Ejercicio8 {
         Scanner sc = new Scanner(System.in);
         System.out.println("ingrese el tamaño del array: ");
         int n=sc.nextInt();
+        int media=0;
+        int apro=0;
 
         double[] nota = new double[n];
 
